@@ -6,8 +6,8 @@ SOURCE_DIR="${DIR}/../src"
 source "${DIR}/.env.local"
 
 gcloud functions \
-  deploy ${FUNCTION_NAME_HTTP} \
-  --source=${SOURCE_DIR} \
+  deploy ${twitter_scrap} \
+  --source=${src} \
   --runtime=python37 \
   --trigger-http \
   --allow-unauthenticated
