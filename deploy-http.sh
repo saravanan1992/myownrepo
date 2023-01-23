@@ -7,7 +7,7 @@ source "${DIR}/.env.local"
 
 gcloud functions \
   deploy ${twitter_scrap} \
-  --source=${src} \
+  --source=${https://github.com/saravanan1992/myownrepo/tree/main/src} \
   --runtime=python37 \
   --trigger-http \
   --allow-unauthenticated
