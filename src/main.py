@@ -11,7 +11,7 @@ import logging
 from io import StringIO
 
 def hello_world(self):
-# Connecting to your Twitter Developer APIs
+# Connecting to Twitter Developer APIs
     try: 
 # Authenticating the APIs
         auth = tw.OAuthHandler(os.environ.get('api_key'), os.environ.get('api_secret'))
@@ -22,7 +22,7 @@ def hello_world(self):
 
 
     try:
-# Define the search term and the date_since date as variables
+# Entering search keyword to pick the tweets 
         search_words = "ikea"
         date_since = "2023-01-19"
 
