@@ -42,7 +42,7 @@ def hello_world(self):
 # print the DataFrame
         
         print(df)
-        df = df.to_json(orient='records',date_format='iso').encode('utf-8')
+        df = df.to_json(orient='records',date_format='iso').encode('utf-8') #Converts df to json
         json_data = json.loads(df)
         
 
@@ -61,9 +61,9 @@ def hello_world(self):
                 autodetect=False,
                 
         )
-        job = client.load_table_from_json(json_data, table_id, job_config=job_config)
-        job.result()  # Waits for the job to complete.
-        table = client.get_table(table_id)  # Make an API request.
+        job = client.load_table_from_json(json_data, table_id, job_config=job_config) #Load table from json
+        job.result()  
+        table = client.get_table(table_id)  
         print(
             "Loaded {} rows and {} columns to {}".format(
              table.num_rows, len(table.schema), table_id
