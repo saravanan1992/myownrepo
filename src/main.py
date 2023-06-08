@@ -72,4 +72,4 @@ def hello_world(self):
     except Exception as e:
         print("Error loading Bq: ", e)
 
-    return 'successss'
+    return 'success'
